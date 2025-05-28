@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поздравление с днём рождения</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("Pictures/background.webp");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 123, 123, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            margin-bottom: 10px;
+            color: #000;
+        }
+        
+        .header h4 {
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            color: #000;
+        }
+        
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .photo {
+            width: clamp(100px, 30vw, 150px);
+            height: clamp(100px, 30vw, 150px);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .message {
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            margin: 20px 0;
+            color: #000;
+        }
+        
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .buttons button {
+            min-width: 120px;
+            padding: 12px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            background-color: white;
+            color: black;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .buttons button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+                padding: 15px;
+            }
+            
+            .buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .buttons button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>С ДНЕМ РОЖДЕНИЯ!! ❤</h1>
+            <h4>Прежде чем поздравлять, вспомним о том, через что прошли?</h4>
+        </div>
+        <div class="photos">
+            <div class="photo">
+                <img src="Pictures/Photo1.jpg" alt="Наши фото 1">
+            </div>
+            <div class="photo">
+                <img src="Pictures/Photo2.jpg" alt="Наши фото 2">
+            </div>
+            <div class="photo">
+                <img src="Pictures/Photo3.jpg" alt="Наши фото 3">
+            </div>
+        </div>
+        <p class="message">Готова покринжевать?</p>
+        <div class="buttons">
+            <button onclick="window.location.href='NO.html'">НЕТ</button>
+            <button onclick="window.location.href='Etap1.html'">Конечно!</button>
+        </div>
+    </div>
+</body>
+</html>
